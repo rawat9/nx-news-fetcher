@@ -7,11 +7,12 @@ import { News } from '@shared/types';
   providedIn: 'root',
 })
 export class NewsFetcherService {
-  constructor(private httpClient: HttpClient) {}
-  endpoint =
+  private readonly endpoint =
     'https://techcrunch.com/wp-json/wp/v2/posts?per_page=20&context=embed';
 
-  getNews(): Observable<News[]> {
+  constructor(private httpClient: HttpClient) {}
+
+  public getNews(): Observable<News[]> {
     return this.httpClient.get<News[]>(this.endpoint).pipe(
       catchError((err) => {
         throw new Error(err);
