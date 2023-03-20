@@ -9,7 +9,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "nxNewsFetcher",
+            "prefix": "web",
             "style": "camelCase"
           }
         ],
@@ -17,7 +17,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "nx-news-fetcher",
+            "prefix": "web",
             "style": "kebab-case"
           }
         ]

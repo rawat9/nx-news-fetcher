@@ -1,0 +1,8 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Stupid Dashboard</h1>
+  <mat-grid-list cols="3" rowHeight="500px">
+    <mat-grid-tile *ngFor="let data of newsData" [colspan]="1" [rowspan]="1">
+      <web-news-card [news]="data" />
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

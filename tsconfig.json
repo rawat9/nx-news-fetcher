@@ -14,8 +14,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@shared/types": ["libs/types/index.ts"],
-      "@shared/services": ["libs/services/index.ts"]
+      "@shared/services": ["libs/services/index.ts"],
+      "@shared/types": ["libs/types/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

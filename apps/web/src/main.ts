@@ -9,5 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { importProvidersFrom } from '@angular/core';
 
 bootstrapApplication(AppComponent, {
-  providers: [provideRouter(appRoutes, withEnabledBlockingInitialNavigation()), importProvidersFrom(BrowserAnimationsModule)],
+  providers: [
+    provideRouter(appRoutes, withEnabledBlockingInitialNavigation()),
+    importProvidersFrom(BrowserAnimationsModule),
+  ],
 }).catch((err) => console.error(err));

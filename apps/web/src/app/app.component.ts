@@ -1,10 +1,11 @@
 import { RouterModule } from '@angular/router';
 import { Component } from '@angular/core';
+import { NewsBoardComponent } from './news-board/news-board.component';
 
 @Component({
   standalone: true,
-  imports: [RouterModule],
-  selector: 'nx-news-fetcher-root',
+  imports: [RouterModule, NewsBoardComponent],
+  selector: 'web-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
