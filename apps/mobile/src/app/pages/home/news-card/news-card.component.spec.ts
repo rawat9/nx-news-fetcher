@@ -2,32 +2,25 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 import { NewsFetcherService } from '@shared/services';
 import { News } from '@shared/types';
-import { Observable, of } from 'rxjs';
+import { of } from 'rxjs';
 import { NewsCardComponent } from './news-card.component';
 import { PipeModule } from './pipes/pipes.module';
 
-class MockNewsFetcherService {
-  getNews(): Observable<News[]> {
-    return of([
-      {
-        id: 1,
-        date: '2021-01-01',
-        link: 'Test Link',
-        title: {
-          rendered: 'Test Title',
-        },
-        content: {
-          rendered: 'Test Content',
-        },
-        excerpt: {
-          rendered: 'Test Excerpt',
-        },
-        jetpack_featured_media_url: 'Test Image',
-        creator: 'Test Creator',
-      },
-    ]);
-  }
-}
+const fakeNewsData: News[] = [
+  {
+    id: 1,
+    date: '2021-01-01',
+    link: 'Test Link',
+    title: {
+      rendered: 'Test Title',
+    },
+    excerpt: {
+      rendered: 'Test Excerpt',
+    },
+    jetpack_featured_media_url: 'Test Image',
+    creator: 'Test Creator',
+  },
+];
 
 describe('News Card Component tests', () => {
   let component: NewsCardComponent;
@@ -40,13 +33,16 @@ describe('News Card Component tests', () => {
       providers: [
         {
           provide: NewsFetcherService,
-          useValue: new MockNewsFetcherService(),
+          useValue: {
+            getNews: () => of(fakeNewsData),
+          },
         },
       ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(NewsCardComponent);
     component = fixture.componentInstance;
+    component.newsData = fakeNewsData[0];
     fixture.detectChanges();
   });
 

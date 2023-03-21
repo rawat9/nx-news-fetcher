@@ -6,7 +6,11 @@
     "start:web": "nx serve web",
     "start:mobile": "nx serve mobile",
     "lint": "nx lint mobile && nx lint web",
+    "test:mobile": "nx test mobile",
+    "test:web": "nx test web",
     "test": "nx test mobile && nx test web",
+    "build:mobile": "nx build web",
+    "build:web": "nx build web",
     "build": "nx build mobile && nx build web"
   },
   "private": true,
