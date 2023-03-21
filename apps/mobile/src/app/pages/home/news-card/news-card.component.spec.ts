@@ -1,26 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 import { NewsFetcherService } from '@shared/services';
-import { News } from '@shared/types';
+import { fakeNewsData } from '@shared/mock-data';
 import { of } from 'rxjs';
 import { NewsCardComponent } from './news-card.component';
 import { PipeModule } from './pipes/pipes.module';
-
-const fakeNewsData: News[] = [
-  {
-    id: 1,
-    date: '2021-01-01',
-    link: 'Test Link',
-    title: {
-      rendered: 'Test Title',
-    },
-    excerpt: {
-      rendered: 'Test Excerpt',
-    },
-    jetpack_featured_media_url: 'Test Image',
-    creator: 'Test Creator',
-  },
-];
 
 describe('News Card Component tests', () => {
   let component: NewsCardComponent;

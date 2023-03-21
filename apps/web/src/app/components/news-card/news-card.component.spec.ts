@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { fakeNewsData } from '@shared/mock-data';
 
 import { NewsCardComponent } from './news-card.component';
 
@@ -13,6 +14,7 @@ describe('NewsCardComponent', () => {
 
     fixture = TestBed.createComponent(NewsCardComponent);
     component = fixture.componentInstance;
+    component.news = fakeNewsData[0];
     fixture.detectChanges();
   });
 

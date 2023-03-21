@@ -15,7 +15,6 @@ describe('NewsBoardComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [NewsBoardComponent],
       imports: [
         NoopAnimationsModule,
         LayoutModule,
