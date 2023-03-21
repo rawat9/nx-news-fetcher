@@ -15,7 +15,8 @@
     "baseUrl": ".",
     "paths": {
       "@shared/services": ["libs/services/index.ts"],
-      "@shared/types": ["libs/types/index.ts"]
+      "@shared/types": ["libs/types/index.ts"],
+      "@shared/mock-data": ["libs/mocks/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
