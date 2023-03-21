@@ -1,7 +1,6 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>News</ion-title>
-    <ion-progress-bar *ngIf="isLoading" type="indeterminate"></ion-progress-bar>
   </ion-toolbar>
 </ion-header>
 
@@ -12,5 +11,6 @@
     </ion-toolbar>
     <ion-searchbar animated="true" placeholder="Search"></ion-searchbar>
   </ion-header>
+  <ion-spinner class="spinner" *ngIf="isLoading" name="crescent"></ion-spinner>
   <mobile-news-card *ngFor="let data of newsData" [newsData]="data" />
 </ion-content>
