@@ -4,7 +4,7 @@ import { NewsFetcherService } from '@shared/services';
 import { fakeNewsData } from '@shared/mock-data';
 import { of } from 'rxjs';
 import { NewsCardComponent } from './news-card.component';
-import { PipeModule } from './pipes/pipes.module';
+import { PipeModule } from '../../pipes/pipes.module';
 
 describe('News Card Component tests', () => {
   let component: NewsCardComponent;

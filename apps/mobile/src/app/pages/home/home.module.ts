@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-import { NewsCardComponentModule } from './news-card/news-card.module';
+import { NewsCardComponentModule } from '../../components/news-card/news-card.module';
 
 @NgModule({
   imports: [

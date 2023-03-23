@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { NewsCardComponent } from './news-card.component';
-import { PipeModule } from './pipes/pipes.module';
+import { PipeModule } from '../../pipes/pipes.module';
 
 @NgModule({
   imports: [CommonModule, FormsModule, IonicModule, PipeModule.forRoot()],
