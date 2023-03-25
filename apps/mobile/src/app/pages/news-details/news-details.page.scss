@@ -1,0 +1,15 @@
+ion-toolbar {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  --background: transparent;
+  --color: white;
+}
+
+.about-info {
+  margin-top: -10px;
+  border-radius: 10px;
+}

@@ -7,6 +7,13 @@ const routes: Routes = [
     path: '',
     component: HomePage,
   },
+  {
+    path: 'detail/:id',
+    loadChildren: () =>
+      import('../news-details/news-details.module').then(
+        (m) => m.NewsDetailsPageModule
+      ),
+  },
 ];
 
 @NgModule({

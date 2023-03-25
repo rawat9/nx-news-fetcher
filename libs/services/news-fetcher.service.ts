@@ -7,16 +7,39 @@ import { News } from '@shared/types';
   providedIn: 'root',
 })
 export class NewsFetcherService {
-  private readonly endpoint =
-    'https://techcrunch.com/wp-json/wp/v2/posts?per_page=20&context=embed';
+  private readonly baseUrl = 'https://techcrunch.com/wp-json/wp/v2';
 
-  constructor(private httpClient: HttpClient) {}
+  private posts = '/posts';
+
+  constructor(private readonly httpClient: HttpClient) {}
 
   public getNews(): Observable<News[]> {
-    return this.httpClient.get<News[]>(this.endpoint).pipe(
+    return this.httpClient
+      .get<News[]>(`${this.baseUrl}${this.posts}`, {
+        params: { per_page: '10', context: 'view' },
+      })
+      .pipe(
+        catchError((err) => {
+          throw new Error(err);
+        })
+      );
+  }
+
+  public getNewsById(id: string): Observable<News> {
+    return this.httpClient.get<News>(`${this.baseUrl}${this.posts}/${id}`).pipe(
       catchError((err) => {
         throw new Error(err);
       })
     );
+  }
+
+  public getNewsByCategory(category: string): Observable<News[]> {
+    return this.httpClient
+      .get<News[]>(`${this.baseUrl}&categories=${category}`)
+      .pipe(
+        catchError((err) => {
+          throw new Error(err);
+        })
+      );
   }
 }

@@ -13,5 +13,7 @@
   <ion-card-content class="card-content">
     {{ newsData.excerpt.rendered | htmlToPlainText }}
   </ion-card-content>
-  <ion-button fill="clear">Read more</ion-button>
+  <ion-button href="home/detail/{{ newsData.id }}" fill="clear"
+    >Read more</ion-button
+  >
 </ion-card>

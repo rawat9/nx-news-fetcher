@@ -10,4 +10,7 @@ export interface News {
   };
   jetpack_featured_media_url: string;
   creator: string;
+  content: {
+    rendered: string;
+  };
 }
