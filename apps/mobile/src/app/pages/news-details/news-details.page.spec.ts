@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
@@ -12,7 +12,7 @@ describe('NewsDetailsComponent tests', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [NewsDetailsPage],
-      imports: [IonicModule.forRoot(), HttpClientModule],
+      imports: [IonicModule.forRoot(), HttpClientTestingModule],
       providers: [
         {
           provide: ActivatedRoute,
