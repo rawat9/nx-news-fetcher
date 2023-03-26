@@ -13,5 +13,8 @@ export const fakeNewsData: News[] = [
     },
     jetpack_featured_media_url: 'Test Image',
     creator: 'Test Creator',
+    content: {
+      rendered: 'Test Content',
+    },
   },
 ];
