@@ -33,4 +33,16 @@ describe('News Card Component tests', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should show the news title', () => {
+    const title = fixture.nativeElement.querySelector('ion-card-title');
+    fixture.detectChanges();
+    expect(title.textContent).toContain(fakeNewsData[0].title.rendered);
+  });
+
+  it('should show the news excerpt', () => {
+    const excerpt = fixture.nativeElement.querySelector('ion-card-content');
+    fixture.detectChanges();
+    expect(excerpt.textContent).toContain(fakeNewsData[0].excerpt.rendered);
+  });
 });
